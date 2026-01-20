@@ -1,0 +1,45 @@
+# --- OS junk ---
+.DS_Store
+Thumbs.db
+
+# --- Editor / IDE ---
+.vscode/
+.idea/
+*.swp
+
+# --- Node / frontend build artifacts ---
+node_modules/
+dist/
+build/
+.cache/
+
+# --- Python ---
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.env
+venv/
+.envrc
+
+# --- Docker ---
+*.log
+docker-compose.override.yml
+
+# --- Database persistent data ---
+mongo-data/
+
+# --- SSL certs (if you add later) ---
+certs/
+acme/
+
+# --- Secrets ---
+*.pem
+*.key
+*.crt
+*.env
+
+# --- Misc ---
+*.tmp
+*.bak
+
