@@ -38,7 +38,8 @@ services:
       - VIRTUAL_HOST=devops.skravops.xyz
       - LETSENCRYPT_HOST=devops.skravops.xyz
       - LETSENCRYPT_EMAIL=${LETSENCRYPT_EMAIL}
-
+    expose:
+      - "80"
 
   secops-frontend:
     build: ./secops-frontend
@@ -47,7 +48,8 @@ services:
       - VIRTUAL_HOST=secops.skravops.xyz
       - LETSENCRYPT_HOST=secops.skravops.xyz
       - LETSENCRYPT_EMAIL=${LETSENCRYPT_EMAIL}
-
+    expose:
+      - "80"
 
   music-frontend:
     build: ./music-frontend
@@ -56,6 +58,8 @@ services:
       - VIRTUAL_HOST=music.skravops.xyz
       - LETSENCRYPT_HOST=music.skravops.xyz
       - LETSENCRYPT_EMAIL=${LETSENCRYPT_EMAIL}
+    expose:
+      - "80"
 
 
   music-api:
