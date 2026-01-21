@@ -1,4 +1,4 @@
-fetch("content.json")
+fetch("/content.json")
   .then(res => res.json())
   .then(data => {
     document.getElementById("page-title").innerText = data.title;
