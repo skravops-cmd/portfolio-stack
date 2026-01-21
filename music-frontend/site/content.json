@@ -1,0 +1,16 @@
+{
+  "title": "Music & Freelance",
+  "siteName": "YourName / Music",
+  "heroTitle": "Composer & Freelance Developer",
+  "heroSubtitle": "Music Production · Web Development · Freelance Projects",
+  "aboutText": "I am a multi-talented musician and freelance web developer. I compose, produce, and manage musical projects while also building modern web applications and APIs.",
+  "contactText": "Feel free to reach out for freelance projects, collaborations, or music commissions.",
+  "github": "https://github.com/yourusername",
+  "linkedin": "https://linkedin.com/in/yourusername",
+  "portfolio": [
+    { "title": "Original Compositions", "description": "Produced and composed original tracks in multiple genres." },
+    { "title": "Web Apps", "description": "Built responsive SPA projects for clients using Flask, HTML/CSS, and JS." },
+    { "title": "Music Projects", "description": "Collaborated on studio recordings and live performances for various clients." }
+  ]
+}
+

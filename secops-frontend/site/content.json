@@ -1,0 +1,16 @@
+{
+  "title": "SecOps Portfolio",
+  "siteName": "YourName / SecOps",
+  "heroTitle": "Securing Modern Infrastructure",
+  "heroSubtitle": "Security Audits · Vulnerability Scanning · Compliance",
+  "aboutText": "I specialize in security operations, monitoring, and vulnerability management. My focus is on securing cloud environments, performing penetration testing, and implementing best security practices across systems.",
+  "contactText": "Contact me for security audits, penetration testing, or consultancy.",
+  "github": "https://github.com/yourusername",
+  "linkedin": "https://linkedin.com/in/yourusername",
+  "portfolio": [
+    { "title": "Vulnerability Assessment", "description": "Performed comprehensive vulnerability scans and risk assessment on cloud environments." },
+    { "title": "Security Monitoring", "description": "Implemented SIEM and alerting pipelines to monitor critical systems." },
+    { "title": "Compliance Reports", "description": "Generated GDPR and ISO 27001 compliance documentation for clients." }
+  ]
+}
+

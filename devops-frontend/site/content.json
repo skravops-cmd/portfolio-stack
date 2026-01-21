@@ -1,0 +1,16 @@
+{
+  "title": "DevOps Portfolio",
+  "siteName": "YourName / DevOps",
+  "heroTitle": "Building Scalable Infrastructure",
+  "heroSubtitle": "Automation · Cloud · CI/CD · Docker",
+  "aboutText": "I am a DevOps engineer passionate about automating deployments, building reliable cloud infrastructure, and optimizing CI/CD pipelines. I love working with Kubernetes, Docker, Terraform, and AWS.",
+  "contactText": "Reach out for DevOps consulting, collaboration, or freelance projects.",
+  "github": "https://github.com/yourusername",
+  "linkedin": "https://linkedin.com/in/yourusername",
+  "portfolio": [
+    { "title": "Kubernetes Cluster", "description": "Deployed production-grade Kubernetes clusters on DigitalOcean." },
+    { "title": "CI/CD Pipelines", "description": "Automated build and deployment workflows using GitHub Actions and Jenkins." },
+    { "title": "Infrastructure as Code", "description": "Created Terraform scripts to provision and manage cloud infrastructure." }
+  ]
+}
+
