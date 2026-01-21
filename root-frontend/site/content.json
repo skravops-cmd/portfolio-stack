@@ -1,0 +1,13 @@
+{
+  "title": "SkravOps",
+  "siteName": "SkravOps",
+  "heroTitle": "Cloud · Security · Automation",
+  "heroSubtitle": "DevOps & SecOps Portfolio Hub",
+  "aboutText": "Welcome to SkravOps. Choose a specialization below to explore my work in DevOps engineering, security operations, or creative freelancing.",
+  "links": [
+    { "title": "DevOps Portfolio", "url": "https://devops.skravops.xyz" },
+    { "title": "SecOps Portfolio", "url": "https://secops.skravops.xyz" },
+    { "title": "Music & Freelance", "url": "https://music.skravops.xyz" }
+  ]
+}
+
