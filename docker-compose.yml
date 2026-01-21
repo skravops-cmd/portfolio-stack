@@ -31,6 +31,15 @@ services:
       - ./html:/usr/share/nginx/html
     restart: always
 
+  root-frontend:
+    build: ./root-frontend
+    container_name: root-frontend
+    environment:
+      - VIRTUAL_HOST=skravops.xyz
+      - LETSENCRYPT_HOST=skravops.xyz
+      - LETSENCRYPT_EMAIL=${LETSENCRYPT_EMAIL}
+
+
   devops-frontend:
     build: ./devops-frontend
     container_name: devops-frontend
