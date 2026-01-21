@@ -32,6 +32,9 @@ mongo-data/
 # --- SSL certs (if you add later) ---
 certs/
 acme/
+vhost.d/
+html/
+
 
 # --- Secrets ---
 *.pem

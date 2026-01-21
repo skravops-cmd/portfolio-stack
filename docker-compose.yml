@@ -2,34 +2,70 @@ version: "3.9"
 
 services:
 
-  nginx:
-    image: nginx:alpine
-    container_name: reverse-proxy
+  nginx-proxy:
+    image: nginxproxy/nginx-proxy:alpine
+    container_name: nginx-proxy
     ports:
       - "80:80"
+      - "443:443"
     volumes:
-      - ./nginx/default.conf:/etc/nginx/conf.d/default.conf
+      - /var/run/docker.sock:/tmp/docker.sock:ro
+      - ./certs:/etc/nginx/certs
+      - ./vhost.d:/etc/nginx/vhost.d
+      - ./html:/usr/share/nginx/html
+    restart: always
+
+  acme-companion:
+    image: nginxproxy/acme-companion
+    container_name: acme-companion
     depends_on:
-      - devops-frontend
-      - secops-frontend
-      - music-frontend
-      - music-api
+      - nginx-proxy
+    environment:
+      - DEFAULT_EMAIL=${LETSENCRYPT_EMAIL}
+
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock:ro
+      - ./certs:/etc/nginx/certs
+      - ./vhost.d:/etc/nginx/vhost.d
+      - ./html:/usr/share/nginx/html
+    restart: always
 
   devops-frontend:
     build: ./devops-frontend
     container_name: devops-frontend
+    environment:
+      - VIRTUAL_HOST=devops.skravops.xyz
+      - LETSENCRYPT_HOST=devops.skravops.xyz
+      - LETSENCRYPT_EMAIL=${LETSENCRYPT_EMAIL}
+
 
   secops-frontend:
     build: ./secops-frontend
     container_name: secops-frontend
+    environment:
+      - VIRTUAL_HOST=secops.skravops.xyz
+      - LETSENCRYPT_HOST=secops.skravops.xyz
+      - LETSENCRYPT_EMAIL=${LETSENCRYPT_EMAIL}
+
 
   music-frontend:
     build: ./music-frontend
     container_name: music-frontend
+    environment:
+      - VIRTUAL_HOST=music.skravops.xyz
+      - LETSENCRYPT_HOST=music.skravops.xyz
+      - LETSENCRYPT_EMAIL=${LETSENCRYPT_EMAIL}
+
 
   music-api:
     build: ./music-api
     container_name: music-api
+    environment:
+      - VIRTUAL_HOST=api.music.skravops.xyz
+      - LETSENCRYPT_HOST=api.music.skravops.xyz
+      - LETSENCRYPT_EMAIL=${LETSENCRYPT_EMAIL}
+
+
     depends_on:
       - mongo
 
