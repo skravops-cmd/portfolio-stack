@@ -63,10 +63,9 @@ services:
     container_name: music-api
     environment:
       - VIRTUAL_HOST=api.music.skravops.xyz
+      - VIRTUAL_PORT=5000
       - LETSENCRYPT_HOST=api.music.skravops.xyz
       - LETSENCRYPT_EMAIL=${LETSENCRYPT_EMAIL}
-
-
     depends_on:
       - mongo
 
